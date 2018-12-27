@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	@keyframes rotate{
+		0%{
+			transform:rotateX(0deg) rotateY(0deg);
+		}
+		100%{
+			transform: rotateX(360deg) rotateY(-360deg);
+		}
+	}
+	div{
+		position: absolute;
+	}
+		.a{
+			perspective:800px;
+			perspective-origin: bottom;
+			width: 350x;
+			height: 350px;
+			top:50%;
+			left:50%;
+			margin-top:-175px;
+			margin-left: -175px;
+		}
+		.b{
+			width: 200px;
+			height: 200px;
+			transform-style: preserve-3d;/*显示3D效果*/
+			top:50%;
+			left:50%;
+			margin-top:-100px;
+			margin-left: -100px;
+			animation: rotate 5s linear infinite;
+		}
+		.c{
+			width: 100px;
+			height: 100px;
+			border:1px solid;
+			background: currentColor;/*当前的颜色值*/
+			top:50%;
+			left:50%;
+			margin-top:-50px;
+			margin-left: -50px;
+		}
+		.a:hover .c{
+			box-shadow:0 0 20px currentColor;
+		}
+		.c1{
+			transform: rotate(0deg) translateZ(51px);
+			color:red;
+		}
+		.c2{
+			transform: rotate(180deg) translateZ(51px);
+			color:green;
+		}
+		.c3{
+			transform: rotateY(90deg) translateZ(51px);
+			color:yellow;
+		}
+		.c4{
+			transform:rotateY(-90deg) translateZ(51px);
+			color:blue;
+
+		}
+	.c5{
+		transform: rotateX(90deg) translateZ(51px);
+			color:orange;
+	}
+	.c6{
+		transform: rotateX(-90deg) translateZ(51px);
+		color: purple;
+	}
+		.d{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			background: rgba(255,255,255,.5);
+			background: #ccc;
+			opacity: .5;
+			left:0;
+			top:0;
+			transition:5s;
+			/*top:50%;
+			left:50%;
+			margin-top:-150px;
+			margin-left: -150px;*/
+		}
+		.d1{
+			transform: rotateY(0deg) translateZ(100px);
+		}
+		.d2{
+			transform: rotateY(180deg) translateZ(100px);
+		}
+		.d3{
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.d4{
+			transform: rotateY(-90deg) translateZ(100px);
+		}
+		.d5{
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		.d6{
+			transform: rotateX(-90deg) translateZ(100px);
+		}
+			.a:hover .d1{
+			transform: rotateY(0deg) translateZ(150px);
+		}
+		.a:hover .d2{
+			transform: rotateY(180deg) translateZ(150px);
+		}
+		.a:hover .d3{
+			transform: rotateY(90deg) translateZ(150px);
+		}
+		.a:hover .d4{
+			transform: rotateY(-90deg) translateZ(150px);
+		}
+		.a:hover .d5{
+			transform: rotateX(90deg) translateZ(150px);
+		}
+		.a:hover .d6{
+			transform: rotateX(-90deg) translateZ(150px);
+		}
+	</style>
+</head>
+<body>
+	<div class="a">
+		<div class="b">
+			<div class="c c1"></div>
+			<div class="c c2"></div>
+			<div class="c c3"></div>
+			<div class="c c4"></div>
+			<div class="c c5"></div>
+			<div class="c c6"></div>
+			<div class="d d1"></div>
+			<div class="d d2"></div>
+			<div class="d d3"></div>
+			<div class="d d4"></div>
+			<div class="d d5"></div>
+			<div class="d d6"></div>
+		</div>
+	</div>
+</body>
+</html>
